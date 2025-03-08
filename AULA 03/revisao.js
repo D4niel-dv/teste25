@@ -35,3 +35,15 @@ a %= 2
 
 console.log(a)
 
+//Declarar e manipular arrays:
+let frutas = ["Maçã"
+,
+"Banana"
+,
+"Laranja"];
+
+
+console.log(frutas[2]); // Maçã
+frutas.push("Uva");
+console.log(frutas.length); // 4
+
