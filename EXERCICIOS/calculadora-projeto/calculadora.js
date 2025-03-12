@@ -6,3 +6,4 @@ const divisao = (a, b) => a / b;
 
 export { soma, subtracao, multiplicacao, divisao };
 
+
