@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 
-const time = {
-  nome: "SAO PAULO FC",
-  escudo: "https://i.pinimg.com/736x/6c/5d/2b/6c5d2b7fb35ba8deccf2406b39544627.jpg",
+const copa = {
+  nome: "Flamengo",
+  escudo: "https://i.pinimg.com/236x/16/db/d2/16dbd20fd582e025dc54cc3fbd1839c9.jpg",
 }
 
-export default function EscudoScreen() {
+export default function CopaScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.nome}>{time.nome}</Text>
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'red',
     padding: 20
   },
   nome: {
