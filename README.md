@@ -7,11 +7,11 @@ npx create-expo-app@latest nome-projeto --template blank
 3. Navegue até o diretório do projeto:
 cd meu-projeto
 /////////////////////////////////////////////////////////////
-1. Instale a biblioteca React Native Paper:
-
-npm install react-native-paper
 
 2. Instale as dependências necessárias:
 
 npm install react-native-vector-icons react-native-safe-area-context
-////////////////////////////////////////////////////////////////////////
+npm install react-native-paper react-native-vector-icons axios
+npm install @react-navigation/native @react-navigation/stack
+npx expo install react-native-gesture-handler react-native-reanimated
+npx expo install react-native-screens react-native-safe-area-context
