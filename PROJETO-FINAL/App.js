@@ -1,18 +1,17 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-
-import { PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
+import { PaperProvider } from 'react-native-paper';
 
-import DrawerRoutes from './src/routes/DrawerRoutes';
-
+import MainRoutes from './src/routes/MainRoutes';
 
 export default function App() {
   return (
     <PaperProvider>
       <NavigationContainer>
-        <DrawerRoutes />
+        <MainRoutes />
       </NavigationContainer>
     </PaperProvider>
   );
 }
+
