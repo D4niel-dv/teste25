@@ -209,13 +209,13 @@ export default function FilmesFavoritosScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FCE4EC',
+    backgroundColor: '#FFFFFF', // fundo branco
     padding: 12,
   },
   titulo: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#AD1457',
+    color: '#D32F2F', // vermelho escuro
     textAlign: 'center',
     marginBottom: 15,
   },
@@ -223,11 +223,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     marginTop: 50,
-    color: '#888',
+    color: '#555', // cinza escuro
     paddingHorizontal: 20,
   },
   card: {
-    backgroundColor: '#FFEBEE',
+    backgroundColor: '#F5F5F5', // cinza claro
     marginBottom: 15,
     borderRadius: 10,
     elevation: 5,
@@ -242,57 +242,57 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     padding: 10,
     borderTopWidth: 1,
-    borderTopColor: '#F8BBD0',
+    borderTopColor: '#E0E0E0', // borda suave
   },
   botaoEditar: {
-    backgroundColor: '#FBC02D',
+    backgroundColor: '#D32F2F', // vermelho
     width: '48%',
   },
   botaoExcluir: {
-    borderColor: '#D32F2F',
+    borderColor: '#000000', // preto
     borderWidth: 1,
     width: '48%',
   },
-  // Estilos para o "modal" simplificado
   overlay: {
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0,0,0,0.5)', // Fundo escuro transparente
+    backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'center',
     alignItems: 'center',
   },
   formularioEdicaoContainer: {
-    backgroundColor: 'white',
+    backgroundColor: '#FFFFFF',
     padding: 25,
     margin: 20,
     borderRadius: 12,
     elevation: 10,
-    width: '90%', // Ajusta a largura para o modal
-    maxHeight: '90%', // Limita a altura
+    width: '90%',
+    maxHeight: '90%',
   },
   modalTitle: {
     fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color: '#AD1457',
+    color: '#D32F2F', // vermelho escuro
   },
   modalFilmeTitle: {
     fontSize: 18,
     fontWeight: '600',
     marginBottom: 15,
-    color: '#6A1B9A',
+    color: '#000000', // preto
   },
   inputModal: {
     marginBottom: 15,
-    backgroundColor: '#FCE4EC',
-    padding: 10, // Adicionado padding para TextInput padrão
-    borderRadius: 5, // Adicionado borderRadius para TextInput padrão
-    borderWidth: 1, // Adicionado borda para TextInput padrão
-    borderColor: '#ccc', // Cor da borda para TextInput padrão
+    backgroundColor: '#FAFAFA',
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#BDBDBD',
+    color: '#000000', // texto preto
   },
   modalButton: {
     marginTop: 10,

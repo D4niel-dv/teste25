@@ -4,7 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import FilmesFavoritos from '../screens/FilmesFavoritos';
 import PerfilUsuario from '../screens/PerfilUsuario';
-import MinhasAvaliacoes from '../screens/MinhasAvaliacoes';
+import MinhasAvaliacoes from '../screens/AgendaFilmes';
 import HomeScreen from '../screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
@@ -40,7 +40,7 @@ export default function TabRoutes() {
     >
       <Tab.Screen name="Início" component={HomeScreen} />
       <Tab.Screen name="Favoritos" component={FilmesFavoritos} />
-      <Tab.Screen name="Avaliações" component={MinhasAvaliacoes} />
+      <Tab.Screen name="Agenda" component={MinhasAvaliacoes} />
       <Tab.Screen name="Usuário" component={PerfilUsuario} />
     </Tab.Navigator>
   );
