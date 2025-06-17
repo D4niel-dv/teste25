@@ -30,7 +30,6 @@ export default function PerfilUsuario() {
 
     let novaLista;
     if (editandoId !== null) {
-      // Editar
       novaLista = usuarios.map(u =>
         u.id === editandoId
           ? { id: editandoId, nome, email, telefone, nascimento, senha }
@@ -38,7 +37,6 @@ export default function PerfilUsuario() {
       );
       setEditandoId(null);
     } else {
-      // Inserir novo
       const novoUsuario = {
         id: Date.now(),
         nome,
@@ -83,13 +81,58 @@ export default function PerfilUsuario() {
     <View style={styles.container}>
       <Text style={styles.title}>Cadastro de Usuários</Text>
 
-      <TextInput label="Nome" mode="outlined" value={nome} onChangeText={setNome} style={styles.input} />
-      <TextInput label="Email" mode="outlined" value={email} onChangeText={setEmail} keyboardType="email-address" style={styles.input} />
-      <TextInput label="Telefone" mode="outlined" value={telefone} onChangeText={setTelefone} keyboardType="phone-pad" style={styles.input} />
-      <TextInput label="Data de Nascimento" mode="outlined" value={nascimento} onChangeText={setNascimento} placeholder="DD/MM/AAAA" style={styles.input} />
-      <TextInput label="Senha" mode="outlined" value={senha} onChangeText={setSenha} secureTextEntry style={styles.input} />
+      <TextInput
+        label="Nome"
+        mode="outlined"
+        value={nome}
+        onChangeText={setNome}
+        style={styles.input}
+        theme={inputTheme}
+      />
+      <TextInput
+        label="Email"
+        mode="outlined"
+        value={email}
+        onChangeText={setEmail}
+        keyboardType="email-address"
+        style={styles.input}
+        theme={inputTheme}
+      />
+      <TextInput
+        label="Telefone"
+        mode="outlined"
+        value={telefone}
+        onChangeText={setTelefone}
+        keyboardType="phone-pad"
+        style={styles.input}
+        theme={inputTheme}
+      />
+      <TextInput
+        label="Data de Nascimento"
+        mode="outlined"
+        value={nascimento}
+        onChangeText={setNascimento}
+        placeholder="DD/MM/AAAA"
+        style={styles.input}
+        theme={inputTheme}
+      />
+      <TextInput
+        label="Senha"
+        mode="outlined"
+        value={senha}
+        onChangeText={setSenha}
+        secureTextEntry
+        style={styles.input}
+        theme={inputTheme}
+      />
 
-      <Button mode="contained" onPress={salvar} style={styles.botao}>
+      <Button
+        mode="contained"
+        onPress={salvar}
+        style={styles.botao}
+        buttonColor="#B00020"
+        textColor="#fff"
+      >
         {editandoId ? 'Atualizar' : 'Cadastrar'}
       </Button>
 
@@ -98,15 +141,20 @@ export default function PerfilUsuario() {
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
           <Card style={styles.card}>
-            <Card.Title title={item.nome} subtitle={item.email} />
+            <Card.Title
+              title={item.nome}
+              titleStyle={{ color: '#000' }}
+              subtitle={item.email}
+              subtitleStyle={{ color: '#B00020' }}
+            />
             <Card.Content>
-              <Text>Telefone: {item.telefone}</Text>
-              <Text>Nascimento: {item.nascimento}</Text>
-              <Text>Senha: {item.senha}</Text>
+              <Text style={styles.textoCard}>Telefone: {item.telefone}</Text>
+              <Text style={styles.textoCard}>Nascimento: {item.nascimento}</Text>
+              <Text style={styles.textoCard}>Senha: {item.senha}</Text>
             </Card.Content>
             <Card.Actions>
-              <Button onPress={() => editar(item)}>Editar</Button>
-              <Button onPress={() => excluir(item.id)}>Excluir</Button>
+              <Button onPress={() => editar(item)} textColor="#B00020">Editar</Button>
+              <Button onPress={() => excluir(item.id)} textColor="#B00020">Excluir</Button>
             </Card.Actions>
           </Card>
         )}
@@ -115,18 +163,27 @@ export default function PerfilUsuario() {
   );
 }
 
+const inputTheme = {
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#B00020',
+    placeholder: '#888',
+  },
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#fff',
   },
   title: {
     fontSize: 22,
     marginBottom: 10,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#388E3C',
+    color: '#000',
   },
   input: {
     marginBottom: 10,
@@ -136,5 +193,9 @@ const styles = StyleSheet.create({
   },
   card: {
     marginBottom: 10,
+    backgroundColor: '#f2f2f2',
+  },
+  textoCard: {
+    color: '#000',
   },
 });

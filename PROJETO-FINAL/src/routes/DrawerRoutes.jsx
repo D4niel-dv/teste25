@@ -14,7 +14,7 @@ export default function DrawerRoutes() {
         title: route?.name ? route.name.replace('-', ' ') : 'Sem título',  // ✅ Proteção aqui
       })}
     >
-      <Drawer.Screen name="Tabs" component={TabRoutes} />
+      <Drawer.Screen name="HOME" component={TabRoutes} />
     </Drawer.Navigator>
   );
 }
